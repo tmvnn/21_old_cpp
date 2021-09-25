@@ -6,11 +6,11 @@
 #    By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 21:21:04 by lbellona          #+#    #+#              #
-#    Updated: 2021/09/22 23:15:49 by lbellona         ###   ########.fr        #
+#    Updated: 2021/09/25 18:16:14 by lbellona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp p_book.cpp
+SRCS			= main.cpp p_book.cpp contact.cpp 
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
