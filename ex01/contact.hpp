@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:12:58 by lbellona          #+#    #+#             */
-/*   Updated: 2021/09/25 19:14:55 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/02 21:32:12 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class contact
 private:
 	int					field_index;
 	std::string			fields_data[CONTACT_FILEDS_COUNT];
-	//static std::string	fields_name[CONTACT_FILEDS_COUNT];
 	std::string			*fields_name;
 
 	enum	field {
@@ -38,7 +37,8 @@ public:
 	~contact();
 
 	std::string	*fields_name_init(void);
-	void		print_field_names(void);
+	void		print_contact_fields(void);
+	bool		contact_added_successfully(void);
 };
 
 
