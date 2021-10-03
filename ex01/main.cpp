@@ -6,17 +6,17 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 18:13:15 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/02 20:11:12 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/03 20:45:53 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "p_book.h"
+#include "P_book.h"
 
 int	main(void)
 {
 	std::string input_command;
 	bool program_is_working;
-	p_book p_book;
+	P_book p_book;
 
 	p_book.display_initial_message();
 	program_is_working = true;
@@ -27,10 +27,9 @@ int	main(void)
 		if (input_command == "ADD") 
 			p_book.add_contact();
 		else if (input_command == "SEARCH")
-			void(0); //Search contact
+			p_book.search_contact();
 		else if (input_command == "EXIT")
-			program_is_working = false;
-		//std::cout << input_command << std::endl;	
+			program_is_working = false;	
 	}
 	
 	return (0);

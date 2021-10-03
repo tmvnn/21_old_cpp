@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/02 21:57:07 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/03 20:38:12 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 
 # include <iostream>
 # include <string>
-# include "contact.hpp"
+# include <iomanip>
+# include "Contact.hpp"
 
-# define P_BOOK_MAX_SIZE 2
+# define P_BOOK_MAX_SIZE 8
 
-class p_book
+class P_book
 {
 private:
 		short	curr_size;
-		short	oldest_contact;
-		contact	contacts[P_BOOK_MAX_SIZE];
+		short	filled_contacts;
+		Contact	contacts[P_BOOK_MAX_SIZE];
 public:
-		p_book();
-		~p_book();
+		P_book();
+		~P_book();
 
 		void	display_initial_message(void);
 		void	add_contact(void);
