@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:12:58 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/03 21:29:05 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/04 21:13:48 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public:
 	~Contact();
 
 	std::string	*fields_name_init(void);
-	void		print_part_of_pbook(short);
+	void		print_part_of_contact(short);
 	void		print_contact_fields();
 	bool		contact_added_successfully(void);
 };

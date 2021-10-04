@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/03 20:38:12 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/04 21:23:09 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ public:
 		void	display_initial_message(void);
 		void	add_contact(void);
 		void	search_contact(void);
-		void	print_contacts(void);
+		void	print_all_contacts(void);
+		void	print_part_of_pbook(void);
 };
 
 #endif
