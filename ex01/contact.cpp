@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:15:28 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/04 21:13:53 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/06 20:34:40 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 Contact::Contact()
 {
-	this->field_index = 0;
 	this->fields_name = this->fields_name_init();
-	//this->print_field_names();
 }
 
 Contact::~Contact()

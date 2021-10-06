@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 18:12:58 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/04 21:13:48 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/10/06 20:34:45 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 class Contact
 {
 private:
-	int					field_index;
 	std::string			fields_data[CONTACT_FILEDS_COUNT];
 	std::string			*fields_name;
 
