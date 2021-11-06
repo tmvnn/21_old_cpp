@@ -6,31 +6,25 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 18:13:15 by lbellona          #+#    #+#             */
-/*   Updated: 2021/10/04 21:16:18 by lbellona         ###   ########.fr       */
+/*   Updated: 2021/11/06 18:23:02 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "P_book.h"
+#include "Zombie.hpp"
 
 int	main(void)
 {
-	std::string input_command;
-	bool program_is_working;
-	P_book p_book;
-
-	p_book.display_initial_message();
-	program_is_working = true;
-	while (program_is_working)
-	{
-		std::cout << "<";
-		std::getline(std::cin, input_command);
-		if (input_command == "ADD") 
-			p_book.add_contact();
-		else if (input_command == "SEARCH")
-			p_book.search_contact();
-		else if (input_command == "EXIT")
-			program_is_working = false;	
-	}
+	/* On Heap */
+	Zombie *z1;
+	z1 = newZombie("Zombie_1");
+	z1->announce();
+	delete z1;
 	
+	/* On Stack */
+	Zombie z2("Zombie_2");
+	z2.announce();
+
+	randomChump("Zombie_3");
+
 	return (0);
 }

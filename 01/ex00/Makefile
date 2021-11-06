@@ -6,18 +6,18 @@
 #    By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 21:21:04 by lbellona          #+#    #+#              #
-#    Updated: 2021/10/03 20:09:30 by lbellona         ###   ########.fr        #
+#    Updated: 2021/11/06 18:10:34 by lbellona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= Account.cpp tests.cpp
+SRCS			= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp 
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I.
 
-NAME			= Account
+NAME			= Zombie
 
 all:			$(NAME)
 
