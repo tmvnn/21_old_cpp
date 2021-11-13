@@ -6,18 +6,18 @@
 #    By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 21:21:04 by lbellona          #+#    #+#              #
-#    Updated: 2021/11/09 21:33:38 by lbellona         ###   ########.fr        #
+#    Updated: 2021/11/13 17:08:21 by lbellona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp
+SRCS			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I.
 
-NAME			= strings
+NAME			= weapon
 
 all:			$(NAME)
 
