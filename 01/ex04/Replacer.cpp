@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Replacer.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2021/11/14 20:52:46 by lbellona         ###   ########.fr       */
+/*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
+/*   Updated: 2021/11/13 16:41:23 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#include "Replacer.hpp"
 
-# include <iostream>
-# include <string>
-
-class Zombie
+Replacer::Replacer(void)
 {
-private:
-		std::string		z_name;
-public:
-		Zombie(std::string name);
-		Zombie();
-		~Zombie();
+}
 
-		void	announce( void );
-		void	set_name( std::string name );
-};
+Replacer::Replacer(std::string type) : _type(type) 
+{}
 
-Zombie* zombieHorde( int N, std::string name );
+Replacer::~Replacer(void)
+{
+}
 
-#endif
+std::string const &Replacer::getType(void)
+{
+	return (_type);
+}
+
+void	Replacer::setType(std::string type)
+{
+	_type = type;
+}

@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2021/11/14 20:52:46 by lbellona         ###   ########.fr       */
+/*   Created: 2021/09/18 18:13:15 by lbellona          #+#    #+#             */
+/*   Updated: 2021/11/14 21:15:42 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#include "Replacer.hpp"
 
-# include <iostream>
-# include <string>
-
-class Zombie
+int	main(int argc, char** argv)
 {
-private:
-		std::string		z_name;
-public:
-		Zombie(std::string name);
-		Zombie();
-		~Zombie();
-
-		void	announce( void );
-		void	set_name( std::string name );
-};
-
-Zombie* zombieHorde( int N, std::string name );
-
-#endif
+	if (argc != 4)
+		std::cout << "[usage] ./replacer filename str1 str2" << std::endl;
+	else
+	{
+		std::cout << argv[0] << std::endl;
+	}
+	
+	return (0);
+}
