@@ -14,19 +14,21 @@
 # define REPLACER_HPP
 
 # include <iostream>
+# include <fstream>
 # include <string>
 
 class Replacer
 {
 private:
-		std::string		_type;
-public:
-		Replacer(std::string type);
-		Replacer(void);
-		~Replacer(void);
+		std::string fname;
+		std::string s1;
+		std::string s2;
+		std::string buff;
 
-		const std::string &getType(void);
-		void				setType(std::string type);
+		bool Parse_file(void);
+public:
+		Replacer(char **argv);
+		~Replacer(void);
 };
 
 #endif
