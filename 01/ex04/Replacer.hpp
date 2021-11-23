@@ -26,6 +26,8 @@ private:
 		std::string buff;
 
 		bool Parse_file(void);
+		void WriteToFile(void);
+		void Replace();
 public:
 		Replacer(char **argv);
 		~Replacer(void);
