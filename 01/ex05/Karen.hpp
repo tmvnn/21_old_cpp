@@ -21,7 +21,7 @@
 class Karen
 {
 private:
-		void (Karen::*fc_ptr[4])();
+		void (Karen::*fc_ptr[LVL_COUNT])();
 
 		void debug( void );
 		void info( void );
