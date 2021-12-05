@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   P_book.cpp                                         :+:      :+:    :+:   */
@@ -44,12 +44,11 @@ void	P_book::add_contact()
 	if (this->contacts[this->curr_size].contact_added_successfully())
 	{
 		this->curr_size = (this->curr_size + 1) % P_BOOK_MAX_SIZE;
-		if (this->curr_size)
+		if (this->curr_size && this->filled_contacts != P_BOOK_MAX_SIZE)
 			this->filled_contacts = this->curr_size;
 		else
 			this->filled_contacts = P_BOOK_MAX_SIZE;
 	}
-	//this->print_contacts();
 }
 
 void	P_book::print_part_of_pbook()
