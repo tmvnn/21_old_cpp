@@ -6,11 +6,11 @@
 #    By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 21:21:04 by lbellona          #+#    #+#              #
-#    Updated: 2021/11/14 20:58:57 by lbellona         ###   ########.fr        #
+#    Updated: 2022/01/03 19:38:36 by lbellona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp Weapon.cpp
+SRCS			= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
