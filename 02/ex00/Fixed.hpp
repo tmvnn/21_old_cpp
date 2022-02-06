@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/01/16 19:48:37 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/06 21:00:36 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 		Fixed(Fixed const &f_instance);
 		~Fixed();
 
-		//void	announce( void );
+		Fixed &operator=(Fixed const &old_f);
 };
 
 #endif

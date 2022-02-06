@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/01/31 23:07:38 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/06 21:02:45 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,11 @@ Fixed::Fixed(Fixed const &f_instance)
 
 Fixed::~Fixed()
 {
+}
+
+Fixed &Fixed::operator=(Fixed const &old_f)
+{
+	std::cout << "Overloaded assignation operator is called" << std::endl;
+	this->val = old_f.val;
+	return (*this);
 }
