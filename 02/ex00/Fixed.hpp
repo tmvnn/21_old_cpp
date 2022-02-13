@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/13 17:12:24 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/13 18:45:13 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ public:
 		~Fixed();
 
 		Fixed &operator=(Fixed const &old_f);
+
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
 };
 
 #endif
