@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/06 21:02:45 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:13:03 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,13 @@
 
 Fixed::Fixed()
 {
-	std::cout << "New Fixed is raised!" << std::endl;
-}
-
-Fixed::Fixed(int val_)
-{
-	this->val = val_;
-	std::cout << " Val == " << this->val << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &f_instance)
 {
-	this->val = f_instance.val;
-	std::cout << "From copy constructor Val = " << this->val << std::endl;
+	std::cout << "Copy constructor called" << this->value << std::endl;
+	this->value = f_instance.value;
 }
 
 Fixed::~Fixed()
@@ -36,6 +30,6 @@ Fixed::~Fixed()
 Fixed &Fixed::operator=(Fixed const &old_f)
 {
 	std::cout << "Overloaded assignation operator is called" << std::endl;
-	this->val = old_f.val;
+	this->value = old_f.value;
 	return (*this);
 }
