@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/14 22:37:48 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/20 13:37:39 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ Fixed::Fixed(const int val)
 	this->value = (val << Fixed::bits);
 }
 
-/*Fixed::Fixed(const float val)
+Fixed::Fixed(const float val)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->value = (val << Fixed::bits);
-}*/
+	this->value = roundf(val * (1 << Fixed::bits));
+}
 
 Fixed::Fixed(Fixed const &f_instance)
 {
@@ -46,6 +46,21 @@ Fixed &Fixed::operator=(Fixed const &old_f)
 	std::cout << "Assignation operator called" << std::endl;
 	this->value = old_f.getRawBits();
 	return (*this);
+}
+
+std::ostream &operator<<(std::ostream &outp, Fixed const &f_instance)
+{
+	return ( outp << (f_instance.toFloat()) );
+}
+
+float Fixed::toFloat( void ) const
+{
+	return ((float)this->value / (float)(1 << Fixed::bits));
+}
+
+int Fixed::toInt( void ) const
+{
+	return (this->value >> Fixed::bits);
 }
 
 int Fixed::getRawBits( void ) const
