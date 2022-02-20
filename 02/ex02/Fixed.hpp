@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/20 14:39:05 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/20 17:50:49 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,27 @@ public:
 		~Fixed();
 
 		Fixed &operator=(Fixed const &old_f);
+		
 		bool operator>(Fixed const &f_instance) const;
 		bool operator<(Fixed const &f_instance) const;
 		bool operator>=(Fixed const &f_instance) const;
 		bool operator<=(Fixed const &f_instance) const;
 		bool operator==(Fixed const &f_instance) const;
 		bool operator!=(Fixed const &f_instance) const;
+		
+		Fixed operator+(Fixed const &f_instance) const;
+		Fixed operator-(Fixed const &f_instance) const;
+		Fixed operator*(Fixed const &f_instance) const;
+		Fixed operator/(Fixed const &f_instance) const;
+		
+		Fixed operator++();
+		Fixed operator++(int);
+		Fixed operator--();
+		Fixed operator--(int);
 
 		float toFloat( void ) 				const;
 		int toInt( void ) 					const;
+		
 		int getRawBits( void ) 				const;
 		void setRawBits( int const raw );
 };

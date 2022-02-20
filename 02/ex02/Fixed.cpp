@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/20 14:39:54 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/20 17:50:32 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,72 @@ bool Fixed::operator==(Fixed const &f_instance) const
 bool Fixed::operator!=(Fixed const &f_instance) const
 {
 	return (this->getRawBits() != f_instance.getRawBits());
+}
+
+Fixed Fixed::operator+(Fixed const &f_instance) const
+{
+	Fixed sum(*this);
+	
+	sum.setRawBits(this->getRawBits() + f_instance.getRawBits());
+	return (sum);
+}
+
+Fixed Fixed::operator-(Fixed const &f_instance) const
+{
+	Fixed diff(*this);
+	
+	diff.setRawBits(this->getRawBits() - f_instance.getRawBits());
+	return (diff);
+}
+
+Fixed Fixed::operator*(Fixed const &f_instance) const
+{
+	Fixed mul(*this);
+	long v1, v2;
+	
+	v1 = (long)this->getRawBits();
+	v2 = (long)f_instance.getRawBits();
+	mul.setRawBits((v1 * v2) / ((1 << Fixed::bits)));
+	return (mul);
+}
+
+Fixed Fixed::operator/(Fixed const &f_instance) const
+{
+	Fixed div(*this);
+	long v1, v2;
+	
+	v1 = (long)this->getRawBits();
+	v2 = (long)f_instance.getRawBits();
+	div.setRawBits((v1 * ((1 << Fixed::bits))) / v2);
+	return (div);
+}
+
+Fixed Fixed::operator++()
+{
+	this->value++;
+	return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+	
+	operator++();
+	return (tmp);
+}
+
+Fixed Fixed::operator--()
+{
+	this->value--;
+	return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+	
+	operator--();
+	return (tmp);
 }
 
 float Fixed::toFloat( void ) const
