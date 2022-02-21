@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/20 17:50:49 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/21 22:29:11 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,19 @@ public:
 		float toFloat( void ) 				const;
 		int toInt( void ) 					const;
 		
+		static Fixed &min(Fixed &v1, Fixed &v2);
+		static Fixed const &min(Fixed const &v1, Fixed const &v2);
+		//static Fixed const &max(Fixed const &v1, Fixed const &v2);
+		//static Fixed &max(Fixed &v1, Fixed &v2);
+		
 		int getRawBits( void ) 				const;
 		void setRawBits( int const raw );
 };
 
 std::ostream &operator<<(std::ostream &outp, Fixed const &f_instance);
+//Fixed const &min(Fixed const &v1, Fixed const &v2);
+//Fixed &min(Fixed &v1, Fixed &v2);
+//Fixed const &max(Fixed const &v1, Fixed const &v2);
+//Fixed &min(Fixed &v1, Fixed &v2);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 18:13:15 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/20 17:51:59 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/21 22:28:59 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	
 	std::cout << b << std::endl;
 	
-	//std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::min( a, b ) << std::endl;
 	
 	return (0);
 }

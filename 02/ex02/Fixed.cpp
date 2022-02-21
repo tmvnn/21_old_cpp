@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/02/20 17:50:32 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/02/21 22:28:06 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,30 @@ int Fixed::toInt( void ) const
 {
 	return (this->value >> Fixed::bits);
 }
+
+/*Fixed &Fixed::min(Fixed &v1, Fixed &v2)
+{
+	if(v1 > v2)
+		return(v2);
+	return (v1);
+}*/
+
+Fixed const &Fixed::min(Fixed const &v1, Fixed const &v2)
+{
+	if(v1 > v2)
+		return(v2);
+	return (v1);
+}
+/*
+static Fixed const &max(Fixed const &v1, Fixed const &v2)
+{
+	
+}
+static Fixed &max(Fixed &a, Fixed &b)
+{
+	
+}
+*/
 
 int Fixed::getRawBits( void ) const
 {
