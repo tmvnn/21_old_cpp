@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/05 17:13:10 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:45:36 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ public:
 		ClapTrap(std::string const &name);
 		ClapTrap(ClapTrap const &f_instance);
 		~ClapTrap();
+
+		/*
+		std::string getName();
+		*/
+	
+		void setAttackDamage(int dmg);
+		int const &getAttackDamage(void);
 
 		void attack(std::string const &target);
 		void takeDamage(unsigned int amount);

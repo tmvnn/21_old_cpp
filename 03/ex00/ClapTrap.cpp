@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/05 17:18:36 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:45:49 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,47 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &f_instance)
 
 void ClapTrap::attack(std::string const &target)
 {
-	std::cout << "ClapTrap " << this->name << " attacks " << target << " causing " << this->attack_damage << "points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->name << " attacks " << target << " causing " << this->attack_damage << " points of damage!" << std::endl;
 }
+
+/*
+std::string    ClapTrap::getName()
+{
+    return (this->name);
+}
+*/
+
+void ClapTrap::setAttackDamage(int dmg)
+{
+	std::cout << "Set attack damage of " << this->name << " to " << dmg << std::endl;
+	this->attack_damage = dmg;
+}
+
+int const &ClapTrap::getAttackDamage(void)
+{
+	return (attack_damage);
+}
+
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	amount++;
+	if (this->hit_points > 0)
+	{
+		std::cout << "ClapTrap " << this->name << " takes " << amount << " points of damage!" << std::endl;
+		this->hit_points -= amount;
+		if (this->hit_points <= 0)
+			std::cout << "ClapTrap " << this->name << " are dead! " << std::endl;
+	}
+	else
+		std::cout << "ClapTrap " << this->name << " are dead! " << std::endl;
+	//std::cout << "hp = "<< this->hit_points << std::endl;	
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	amount++;
+	if (hit_points > 0)
+	{
+		std::cout << "ClapTrap " << name << " restored "<< amount << " hit points!"<<std::endl;
+		hit_points += amount;
+	}
 }

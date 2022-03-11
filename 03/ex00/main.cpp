@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 18:13:15 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/05 17:18:07 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/11 20:45:54 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,31 @@
 
 int	main(void)
 {
-	ClapTrap a("CT_a");
-	ClapTrap b(a);
-	ClapTrap c;
+	ClapTrap war1("warrior_1");
+	ClapTrap war2("warrior_2");
+
+	war1.setAttackDamage(3);
+	war2.setAttackDamage(7);
 	
-	c = b;
+	war1.attack("warrior_2");
+	war2.takeDamage(war1.getAttackDamage());
 	
+	war1.attack("warrior_2");
+	war2.takeDamage(war1.getAttackDamage());
+
+	war1.attack("warrior_2");
+	war2.takeDamage(war1.getAttackDamage());
+
+	war2.attack("warrior_1");
+	war1.takeDamage(war2.getAttackDamage());
+
+	war1.beRepaired(6);
+
+	war2.attack("warrior_1");
+	war1.takeDamage(war2.getAttackDamage());
+
+	war1.attack("warrior_2");
+	war2.takeDamage(war1.getAttackDamage());
+
 	return (0);
 }
