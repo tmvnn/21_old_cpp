@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/12 22:11:24 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/13 21:33:11 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-public:
+protected:
 		std::string			name;
 		int					hit_points;
 		int					energy_points;

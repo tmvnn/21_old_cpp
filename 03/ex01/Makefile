@@ -6,18 +6,18 @@
 #    By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/30 21:21:04 by lbellona          #+#    #+#              #
-#    Updated: 2022/03/04 15:18:02 by lbellona         ###   ########.fr        #
+#    Updated: 2022/03/13 21:02:08 by lbellona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			= main.cpp ClapTrap.cpp
+SRCS			= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
 CXXFLAGS		= -Wall -Wextra -Werror -I.
 
-NAME			= ClapTrap
+NAME			= ScavTrap
 
 all:			$(NAME)
 
