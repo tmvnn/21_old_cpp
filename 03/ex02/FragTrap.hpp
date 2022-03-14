@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/14 21:38:09 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/14 22:26:51 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class FragTrap : public ClapTrap
 			FragTrap &operator=(FragTrap const &f_instance);
 
 			void attack(std::string const &target);
-			void guardGate();
+			void highFivesGuys(void);
 };
 
 #endif
