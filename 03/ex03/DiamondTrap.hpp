@@ -13,12 +13,15 @@
 #ifndef DiamondTrap_HPP
 # define DiamondTrap_HPP
 
-# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 # include <iostream>
 # include <string>
 
-class DiamondTrap : public ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
+	private:
+			std::string		name;
 	public:
 			DiamondTrap();
 			DiamondTrap(std::string const &name);
@@ -28,7 +31,7 @@ class DiamondTrap : public ClapTrap
 			DiamondTrap &operator=(DiamondTrap const &f_instance);
 
 			void attack(std::string const &target);
-			void highFivesGuys(void);
+			void whoAmI(void);
 };
 
 #endif

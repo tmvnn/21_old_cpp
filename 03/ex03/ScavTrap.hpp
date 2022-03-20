@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:07:05 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/13 21:18:01 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/20 20:09:46 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,13 @@
 # include <iostream>
 # include <string>
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
+	protected:
+			//std::string		name;
+			//int				hit_points;
+			int				energy_points;
+			//int				attack_damage;
 	public:
 			ScavTrap();
 			ScavTrap(std::string const &name);
