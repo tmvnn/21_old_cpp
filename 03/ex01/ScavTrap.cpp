@@ -6,7 +6,7 @@
 /*   By: lbellona <lbellona@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 23:13:49 by lbellona          #+#    #+#             */
-/*   Updated: 2022/03/13 21:23:26 by lbellona         ###   ########.fr       */
+/*   Updated: 2022/03/22 22:50:17 by lbellona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,9 @@ void ScavTrap::attack(std::string const &target)
 void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << this->name <<" have enterred in Gate keeper mode!"<<std::endl;
+	/*
+	std::cout << "ScavTrap:" << this->attack_damage << std::endl;
+	std::cout << "ScavTrap:" << this->hit_points << std::endl;
+	std::cout << "ScavTrap:" << this->energy_points << std::endl;
+	*/
 }
